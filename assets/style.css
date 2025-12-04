@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+/* ====================================================
+   基本設定：漆黒の背景とMS Pゴシック
+   ==================================================== */
+body {
+  font-family: "MS PGothic", "Osaka", monospace;
+  background-color: #000000; /* 完全な黒 */
+  color: #cccccc; /* 文字は少し暗めの白 */
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+/* リンク色：黒に映えるネオンカラー */
+a:link { color: #00ffff; text-decoration: underline; } /* 水色 */
+a:visited { color: #ff00ff; text-decoration: underline; } /* ピンク */
+a:hover { color: #ff0000; background-color: #ffffff; text-decoration: none; } /* ホバーで白背景赤文字 */
+a:active { color: #ff0000; }
+
+/* ====================================================
+   レイアウト
+   ==================================================== */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ヘッダー：3D枠線 */
+header {
+  background-color: #000033; /* 濃紺 */
+  border-bottom: 3px ridge #4169e1; /* 立体的な青枠 */
+  padding: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #ffff00; /* 蛍光イエロー */
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px #ff0000; /* 赤い影をつけて強調 */
+}
+
+/* ★流れる文字エリア★ */
+.marquee-area {
+  background-color: #330000; /* 赤黒い背景 */
+  border-top: 1px solid #ff0000;
+  border-bottom: 1px solid #ff0000;
+  color: #ffcccc;
+  
+  font-size: 13px;
+  font-weight: normal;
+  padding: 4px;
+  line-height: 1.2;
+}
+
+/* コンテンツエリア（左右分割） */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+/* ====================================================
+   サイドバー：司令室のボタン風
+   ==================================================== */
+.sidebar {
+  width: 200px;
+  background-color: #000000;
+  border-right: 2px groove #666;
+  padding: 15px;
+  text-align: center;
+}
+
+/* メニューボタン：Windows 95/98 のシステム標準スタイル */
+.menu-btn {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  
+  /* あの独特の「ねずみ色」 */
+  background-color: #c0c0c0; 
+  
+  /* 境界線を自分で描いて「パキッとした3D」にする */
+  border-top: 2px solid #ffffff;    /* 上と左は光（白） */
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040;  /* 下と右は影（濃いグレー） */
+  border-bottom: 2px solid #404040;
+  
+  color: #000000 !important;
+  text-decoration: none !important;
+  
+  /* フォントは太字にせず、普通のMSゴシックで */
+  font-family: "MS PGothic", "Osaka", sans-serif;
+  font-weight: normal; 
+  font-size: 12px;
+  
+  padding: 3px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 押した時の凹み表現 */
+.menu-btn:active {
+  /* 影と光を逆転させる */
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  
+  /* 文字を1px右下にずらして、本当に凹んだように見せる */
+  padding: 4px 0 2px 0; 
+  /* (元のpadding-top:3px + 1px = 4px, padding-bottom:3px - 1px = 2px) */
+}
+
+/* カウンター（デジタル数字風） */
+.counter {
+  border: 2px inset #999;
+  background-color: #111;
+  color: #ff0000; /* 赤色LED */
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+/* バナーエリア */
+.banner-area { margin-top: 30px; }
+.banner {
+  width: 88px; height: 31px;
+  border: 1px solid #666;
+  background-color: #fff;
+  color: #000;
+  font-size: 9px; line-height: 31px;
+  margin: 5px auto; display: block;
+}
+
+/* ====================================================
+   メインコンテンツ
+   ==================================================== */
+main {
+  flex: 1;
+  padding: 25px;
+  /* 背景：黒地にうっすらグリッド線（サイバー感） */
+  background-image: 
+    linear-gradient(#1a1a1a 1px, transparent 1px), 
+    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 記事タイトル */
+h2 {
+  font-size: 18px;
+  color: #00ff00; /* ハッカーグリーン */
+  border-left: 8px solid #00ff00;
+  background-color: #001100;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+/* 日付 */
+.date { font-size: 12px; color: #999; text-align: right; border-bottom:1px dotted #666; margin-bottom:10px; }
+
+/* 点滅（Blink） */
+.blink { animation: blinker 1s linear infinite; color: red; font-weight: bold; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* コードブロック（DOS画面風・青背景） */
+/* コードブロック：MSゴシック指定で「ドット感」を出し、背景は濃紺に */
+pre {
+  /* フォント：あえて日本語フォント(MSゴシック)を優先指定すると、等幅でレトロなドット文字になります */
+  font-family: "MS Gothic", "Osaka-Mono", monospace;
+  
+  /* 背景：限りなく黒に近い、深い紺色 */
+  background-color: #000022; 
+  
+  /* 文字色：白（コントラスト確保） */
+  color: #ffffff;
+  
+  /* 枠線：少しだけ立体的に凹ませる */
+  border: 2px inset #5555ff;
+  
+  padding: 15px;
+  overflow: auto;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  /* 行間も少し詰めて「当時のエディタ」っぽく */
+  line-height: 1.3;
+}

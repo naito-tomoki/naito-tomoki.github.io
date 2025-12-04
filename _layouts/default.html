@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>{{ site.title }}</h1>
+    <div style="font-size:12px; margin-top:5px; color:#aaa;">
+      Welcome to my Website.<br>
+      Don't expect too much.
+    </div>
+  </header>
+
+  <div class="marquee-area">
+    <marquee scrolldelay="120" truespeed>
+      <span style="color:yellow;">★Update★</span> 12/05 ★サイト開設★。技術メモを公開中。キリ番報告はBBSまでお願いします。
+    </marquee>
+  </div>
+
+  <div class="content-wrapper">
+    
+    <aside class="sidebar">
+      <font color="white" size="3"><b>:: MENU ::</b></font><br><br>
+      
+      <a href="/" class="menu-btn">ENTER (Top)</a>
+      <a href="/profile/" class="menu-btn">PROFILE</a>
+      <a href="/diary/" class="menu-btn">DIARY</a>
+      <a href="/tech/" class="menu-btn">TECH NOTE</a>
+      <a href="/links/" class="menu-btn">LINKS</a>
+      <a href="mailto:{{ site.email }}" class="menu-btn">MAIL ME</a>
+      
+      <br>
+      <hr size="1" color="#666666">
+      
+      <font size="2" color="#ccc">Total Access:</font><br>
+      <span id="busuanzi_container_site_pv" style="display:none;">
+        <div class="counter">
+          <span id="busuanzi_value_site_pv"></span>
+        </div>
+      </span>
+      <br>
+      <font size="1" color="#666">Since 2025.12</font>
+      
+      <br><br>
+      
+      <div style="font-size:11px; color:#ffcc00; border:1px dashed #666; padding:5px;">
+        ※キリ番報告は<br>BBSまで！
+      </div>
+
+      <div class="banner-area">
+        <font size="1" color="white">Link Free</font><br>
+		<a href="/links/"> <img src="/assets/images/banner.gif" width="88" height="31" alt="My Banner" border="0">
+		</a>
+      </div>
+    </aside>
+
+    <main>
+      <div style="font-size:12px; margin-bottom:15px; color:#aaa;">
+        Host &gt; <a href="/" style="color:#aaa;">Home</a> &gt; {{ page.title }}
+      </div>
+
+      {% if page.layout == 'post' %}
+        <div class="date">
+          Last Update: {{ page.date | date: "%Y.%m.%d" }}
+        </div>
+      {% endif %}
+      
+      {{ content }}
+      
+      <br><br>
+      <center>
+        <hr size="1" width="90%" color="#666666">
+        <a href="#top" style="color:#ffff00;">▲Page Top</a>
+      </center>
+    </main>
+  </div>
+
+  <footer style="background:#000; color:#666; text-align:center; padding:15px; font-size:11px; border-top:2px ridge #4169e1;">
+    Copyright (c) 2025 {{ site.author }} All Rights Reserved.<br>
+    This site is protected by me.<br>
+    <span class="blink">Do not copy!</span>
+  </footer>
+
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>

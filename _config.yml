@@ -1,0 +1,10 @@
+title: Tnaito Note
+author: tnaito
+email: 42tnaito@gmail.com
+description: >
+  memo tech ...
+baseurl: "https://naito-tomoki.github.io/"
+url: ""
+
+markdown: kramdown
+theme: minima

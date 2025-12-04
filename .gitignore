@@ -1,0 +1,13 @@
+# Jekyllがつくる生成物
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Rubyライブラリ
+vendor/
+.bundle/
+
+# OSのゴミファイル
+.DS_Store
+Thumbs.db
