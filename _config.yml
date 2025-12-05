@@ -3,8 +3,8 @@ author: tnaito
 email: 42tnaito@gmail.com
 description: >
   memo tech ...
-baseurl: "https://naito-tomoki.github.io/"
-url: ""
+baseurl: ""
+url: "https://naito-tomoki.github.io/"
 
 markdown: kramdown
 theme: minima
