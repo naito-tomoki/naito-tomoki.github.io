@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 曲紹介１＜ＨＵＧっと！YELL FOR YOU
+title: 曲紹介１ ＨＵＧっと！YELL FOR YOU
 date: 2025-12-05
 permalink: /diary/
 ---
