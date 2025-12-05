@@ -10,4 +10,5 @@ markdown: kramdown
 theme: minima
 
 timezone: Asia/Tokyo
-# future: true
+
+future: true
