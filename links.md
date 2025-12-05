@@ -27,4 +27,4 @@ permalink: /links/
 **Site Name:** {{ site.title }}<br>
 **URL:** {{ site.url }}<br>
 **Banner:** <br>
-![バナー](/assets/images/banner.gif)
+![バナー]({{ site.baseurl }}/assets/images/banner.gif)
