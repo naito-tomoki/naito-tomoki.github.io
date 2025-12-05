@@ -10,8 +10,9 @@ permalink: /links/
 
 ### ■ Tech Sites
 * [GitHub](https://github.com/naito-tomoki/) ... ソースコード置き場
-* [AtCoder](https://atcoder.jp) ... 競技プログラミング
+* [Discord](https://discord.com/app) ... 身内との連絡
 * [Google](https://google.com) ... 先生
+* [AtCoder](https://atcoder.jp) ... 競技プログラミング
 * [Gemini](https://gemini.google.com) ... サイト作ってくれた
 
 ### ■ Friends
